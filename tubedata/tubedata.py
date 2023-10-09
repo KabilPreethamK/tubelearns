@@ -3,8 +3,28 @@ from youtube_transcript_api import YouTubeTranscriptApi
 import re
 import requests
 from pytube import Playlist
+exclude_keywords  = [
+                    "[Music]",
+                    "[Applause]",
+                    "[Laughter]",
+                    "[Singing]",
+                    "[Background Noise]",
+                    "[Indistinct]",
+                    "[Cough]",
+                    "[Phone Ringing]",
+                    "[Phone Buzzing]",
+                    "[Birds Chirping]",
+                    "[Traffic Noise]",
+                    "[Water Flowing]",
+                    "[Wind Blowing]",
+                    "[Explosion]",
+                    "[Gunshots]",
+                    "[Sirens Wailing]",
+                    "[Dog Barking]",
+                    "[Bell Ringing]"
+                ]
 
-def text_link(path_text,name="raw_data"):
+def text_link(path_text,exclude_keywords,name="raw_data"):
     if not os.path.exists(f"./{name}/"):
       os.makedirs(f"./{name}/")
     with open(path_text, "r") as f:
@@ -27,8 +47,7 @@ def text_link(path_text,name="raw_data"):
 
             transcript = YouTubeTranscriptApi.get_transcript(extracted_string)
 
-            exclude_keywords = ["[Music]", "[Applause]"]
-
+            
             filtered_transcript = ' '.join(entry['text'] for entry in transcript if all(keyword not in entry['text'] for keyword in exclude_keywords))
 
             url_punct = "http://bark.phon.ioc.ee/punctuator"
@@ -53,7 +72,7 @@ def text_link(path_text,name="raw_data"):
         except:
             pass
 
-def url_grab(url,name="raw_data"):
+def url_grab(url,exclude_keywords,name="raw_data"):
     if not os.path.exists(f"./{name}/"):
       os.makedirs(f"./{name}/")
 
@@ -73,8 +92,6 @@ def url_grab(url,name="raw_data"):
         print("No match found")
 
       transcript = YouTubeTranscriptApi.get_transcript(extracted_string)
-
-      exclude_keywords = ["[Music]", "[Applause]"]
 
       filtered_transcript = ' '.join(entry['text'] for entry in transcript if all(keyword not in entry['text'] for keyword in exclude_keywords))
 
@@ -107,7 +124,7 @@ def url_grab(url,name="raw_data"):
       print("Some error occured plz check the url that you provided is validate.")
       print(e)
 
-def playlist_grab(playlist_url, name="raw_data"):
+def playlist_grab(playlist_url,exclude_keywords, name="raw_data"):
     try:
         playlist = Playlist(playlist_url)
         playlist._video_regex = re.compile(r"\"url\":\"(/watch\?v=[\w-]*)")
@@ -132,7 +149,7 @@ def playlist_grab(playlist_url, name="raw_data"):
 
                 transcript = YouTubeTranscriptApi.get_transcript(extracted_string)
 
-                exclude_keywords = ["[Music]", "[Applause]"]
+
 
                 filtered_transcript = ' '.join(entry['text'] for entry in transcript if all(keyword not in entry['text'] for keyword in exclude_keywords))
 
