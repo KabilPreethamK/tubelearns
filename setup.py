@@ -12,7 +12,7 @@ LONG_DESCRIPTION = "This Python script serves as a powerful tool for machine lea
 
 # Setting up
 setup(
-    name="tube-data",
+    name="tubelearn",
     version=VERSION,
     author="KabilPreethamK",
     author_email="<kabilpreethamk@gmail.com>",
@@ -24,11 +24,14 @@ setup(
     keywords=['python', 'video', 'transcript', 'raw data', 'cleaning', 'machine learning','pre-processing'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Machine Learning Engineer",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Education",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-        "Operating System :: POSIX :: Linux", 
-    ]
+        "Operating System :: POSIX :: Linux",
+]
 )
