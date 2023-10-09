@@ -12,7 +12,7 @@ LONG_DESCRIPTION = "This Python script serves as a powerful tool for machine lea
 
 # Setting up
 setup(
-    name="tubelearn",
+    name="tubelearns",
     version=VERSION,
     author="KabilPreethamK",
     author_email="<kabilpreethamk@gmail.com>",
