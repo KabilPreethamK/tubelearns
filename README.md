@@ -16,7 +16,7 @@ Tube-Data is a Python script designed for extracting and cleaning YouTube video 
 You can install the required dependencies using `pip`:
 
 ```bash
-pip install youtube-transcript-api requests pytube regex
+pip install tubelearn
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ pip install youtube-transcript-api requests pytube regex
 ### Extract Transcripts from a List of Video URLs
 
 ```python
-from tube_data import text_link
+from tubelearn import text_link
 
 # Provide a path to a text file containing YouTube video URLs.
 text_link('path_to_file.txt', name='output_folder_name')
@@ -33,7 +33,7 @@ text_link('path_to_file.txt', name='output_folder_name')
 ### Extract Transcript from a Single Video URL
 
 ```python
-from tube_data import url_grab
+from tubelearn import url_grab
 
 # Provide a single YouTube video URL.
 url_grab('video_url', name='output_folder_name')
@@ -42,7 +42,7 @@ url_grab('video_url', name='output_folder_name')
 ### Extract Transcripts from a YouTube Playlist
 
 ```python
-from tube_data import playlist_grab
+from tubelearn import playlist_grab
 
 # Provide the URL of a YouTube playlist.
 playlist_grab('playlist_url', name='output_folder_name')
@@ -51,7 +51,7 @@ playlist_grab('playlist_url', name='output_folder_name')
 ### Convert Playlist Video Links to Text File
 
 ```python
-from tube_data import play2text
+from tubelearn import play2text
 
 # Provide the URL of a YouTube playlist.
 play2text('playlist_url')
