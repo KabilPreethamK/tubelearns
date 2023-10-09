@@ -1,0 +1,64 @@
+## TubeLearns Workflow
+
+### 1. Installation
+
+Before you can use `tubelearns`, you need to install it and its dependencies.
+
+```bash
+pip install tubelearns
+```
+
+### 2. Import `tubelearns` Functions
+
+Import the relevant functions from `tubelearns` into your Python script or Jupyter Notebook.
+
+```python
+from tubelearns import text_link, url_grab, playlist_grab, play2text
+```
+
+### 3. Extract Transcripts from YouTube Videos
+
+#### Option 1: Extract Transcripts from a List of Video URLs
+
+If you have a list of YouTube video URLs in a text file, you can extract transcripts from all of them at once.
+
+```python
+# Provide the path to the text file containing video URLs
+text_link('path_to_file.txt', name='output_folder_name')
+```
+
+#### Option 2: Extract Transcript from a Single Video URL
+
+To extract the transcript from a single YouTube video URL:
+
+```python
+# Provide a single YouTube video URL
+url_grab('video_url', name='output_folder_name')
+```
+
+#### Option 3: Extract Transcripts from a YouTube Playlist
+
+If you want to extract transcripts from an entire YouTube playlist:
+
+```python
+# Provide the URL of a YouTube playlist
+playlist_grab('playlist_url', name='output_folder_name')
+```
+
+### 4. Convert Playlist Video Links to Text File
+
+You can also convert the video links from a YouTube playlist into a text file:
+
+```python
+# Provide the URL of a YouTube playlist
+play2text('playlist_url')
+```
+
+### 5. Data Processing (Optional)
+
+After extracting transcripts, you may want to perform further data processing or analysis on the obtained text data using various natural language processing (NLP) or machine learning techniques.
+
+### 6. Conclusion
+
+The `tubelearns` package streamlines the process of extracting and cleaning YouTube video transcripts, making it an invaluable tool for machine learning practitioners and researchers working on projects related to data preprocessing and dataset collection.
+
