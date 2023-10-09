@@ -71,9 +71,5 @@ Contributions are welcome! Please feel free to open issues or submit pull reques
 
 ## Contact
 
-For any inquiries or feedback, please contact [Your Name](mailto:your_email@example.com).
+For any inquiries or feedback, please contact [KabilPreethamK](mailto:kabilpreethamk@gmail.com).
 
-```
-
-`Kabil Preetham K`
-`kabilpreethamk@gmail.com`
