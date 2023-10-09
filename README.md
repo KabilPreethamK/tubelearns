@@ -75,4 +75,5 @@ For any inquiries or feedback, please contact [Your Name](mailto:your_email@exam
 
 ```
 
-Please replace `Your Name` and `your_email@example.com` with your contact information or leave them as placeholders for the actual maintainer's details.
+`Kabil Preetham K`
+`kabilpreethamk@gmail.com`
