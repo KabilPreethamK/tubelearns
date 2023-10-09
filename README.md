@@ -16,7 +16,7 @@ Tube-Data is a Python script designed for extracting and cleaning YouTube video 
 You can install the required dependencies using `pip`:
 
 ```bash
-pip install youtube-transcript-api requests pytube regex
+pip install tubelearn
 ```
 
 ## Usage
