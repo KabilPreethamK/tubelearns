@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tubelearns
-Version: 1.0.1
+Version: 1.1.1
 Summary: Python script for extracting and cleaning YouTube video transcripts for Pre-Processing in machine learning.
 Author: KabilPreethamK
 Author-email: <kabilpreethamk@gmail.com>
