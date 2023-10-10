@@ -48,19 +48,6 @@ from tubelearns import playlist_grab
 playlist_grab('playlist_url', name='output_folder_name')
 ```
 
-### Tokenization
-
-```python
-from tubelearns import Tokenization
-
-# Initialize the Tokenization class
-tokenizer = Tokenization()
-
-# Tokenize text
-content = "Hello sam. How are you."
-tokenized_text = tokenizer.tokenize_raw(content)
-print(tokenized_text)
-```
 
 ### Cleaning and Punctuation Removal
 
@@ -74,6 +61,19 @@ cleaner = Cleaning()
 content = "Hey! hope you good"
 cleaned_text = cleaner.punct_raw(content)
 print(cleaned_text)
+```
+### Tokenization
+
+```python
+from tubelearns import Tokenization
+
+# Initialize the Tokenization class
+tokenizer = Tokenization()
+
+# Tokenize text
+content = "Hello sam. How are you."
+tokenized_text = tokenizer.tokenize_raw(content)
+print(tokenized_text)
 ```
 
 ## Development Status
