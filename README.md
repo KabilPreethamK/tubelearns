@@ -10,10 +10,11 @@ Tube-Data is a Python script designed for extracting and cleaning YouTube video 
 - Saves cleaned transcripts into separate text files.
 - Supports individual video URLs, batch processing from a list of URLs, and entire playlists.
 - Streamlines the dataset collection process for machine learning applications.
+- New Feature: Tokenization and Punctuation Removal for text preprocessing.
 
 ## Installation
 
-You can install the required dependencies using `pip`:
+You can install the required dependencies using pip:
 
 ```bash
 pip install tubelearns
@@ -57,6 +58,20 @@ from tubelearns import play2text
 play2text('playlist_url')
 ```
 
+### Tokenization and Punctuation Removal
+
+```python
+from tubelearns import Tokenization
+
+# Initialize the Tokenization class
+tokenizer = Tokenization()
+
+# Tokenize and clean text
+content = "This is a sample sentence."
+cleaned_text = tokenizer.tokenize_rawlower(content)
+print(cleaned_text)
+```
+
 ## Development Status
 
 This project is currently in the planning stage.
@@ -72,4 +87,5 @@ Contributions are welcome! Please feel free to open issues or submit pull reques
 ## Contact
 
 For any inquiries or feedback, please contact [KabilPreethamK](mailto:kabilpreethamk@gmail.com).
+```
 
