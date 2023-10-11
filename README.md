@@ -54,7 +54,7 @@ cleaner = Cleaning()
 # Tokenize text data
 text_data = "Your input text here."
 tokenized_data = tokenizer.tokenize_raw(text_data)
-cleaned_data = cleaner.punct_raw(tokenized_data)
+cleaned_data = cleaner.punct_list(tokenized_data)
 ```
 
 Refer to the [TubeLearns documentation](https://github.com/KabilPreethamK/tubelearns/blob/main/Documentation.md) for detailed usage instructions and examples.
