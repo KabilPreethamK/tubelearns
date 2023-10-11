@@ -1,7 +1,7 @@
 
-## Tube-Data: YouTube Video Transcript Extractor
+## TubeLearns: YouTube Video Transcript Extractor
 
-Tube-Data is a Python script designed for extracting and cleaning YouTube video transcripts for preprocessing in machine learning. This versatile tool streamlines the process of acquiring high-quality text data from YouTube videos, making it ideal for various natural language processing tasks, sentiment analysis, speech recognition, and more.
+TubeLearns is a Python script designed for extracting and cleaning YouTube video transcripts for preprocessing in machine learning. This versatile tool streamlines the process of acquiring high-quality text data from YouTube videos, making it ideal for various natural language processing tasks, sentiment analysis, speech recognition, and more.
 
 ## Features
 
@@ -57,7 +57,7 @@ tokenized_data = tokenizer.tokenize_raw(text_data)
 cleaned_data = cleaner.punct_raw(tokenized_data)
 ```
 
-Refer to the [TubeLearns documentation](https://your-documentation-link-here) for detailed usage instructions and examples.
+Refer to the [TubeLearns documentation](https://github.com/KabilPreethamK/tubelearns/blob/main/Documentation.md) for detailed usage instructions and examples.
 
 ## Contributing
 
@@ -77,6 +77,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ---
 
 
-Enjoy using TubeLearns! If you have any questions or encounter issues, please don't hesitate to [get in touch](mailto:your-email@example.com).
+Enjoy using TubeLearns! If you have any questions or encounter issues, please don't hesitate to [get in touch](mailto:tubelearnsofficial@gmail.com).
 ```
-
