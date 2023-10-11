@@ -2,3 +2,5 @@ youtube-transcript-api
 requests
 pytube
 regex
+num2words
+spacy

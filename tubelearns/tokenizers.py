@@ -1,8 +1,4 @@
-import spacy
-from num2words import num2words
-import string
 
-nlp = spacy.load("en_core_web_sm")
 
 class Tokenization:
     def __init__(self) -> None:
@@ -10,11 +6,17 @@ class Tokenization:
         pass
     
     def tokenize_raw(self,path):
+        import spacy
+        nlp = spacy.load("en_core_web_sm")
         tokens_sentences = nlp(path)
         sentences = [sent.text for sent in tokens_sentences.sents]
         return sentences
     
     def tokenize_rawlower(self,path):
+        from num2words import num2words
+        import spacy
+        nlp = spacy.load("en_core_web_sm")
+       
         tokens_sentences = nlp(path)
         sentences = [sent.text for sent in tokens_sentences.sents]
         
@@ -41,6 +43,10 @@ class Cleaning:
         pass
     
     def punct_raw(self,path_to_list):
+        import spacy
+        nlp = spacy.load("en_core_web_sm")
+        
+        import string
         punctuation = set(string.punctuation)
 
 

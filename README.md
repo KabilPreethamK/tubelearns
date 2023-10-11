@@ -13,7 +13,7 @@ Tube-Data is a Python script designed for extracting and cleaning YouTube video 
 
 ## Installation
 
-You can install the required dependencies using pip:
+You can install TubeLearns using pip:
 
 ```bash
 pip install tubelearns
@@ -21,75 +21,62 @@ pip install tubelearns
 
 ## Usage
 
-### Extract Transcripts from a List of Video URLs
+### Playlist Grabbing
 
 ```python
-from tubelearns import text_link
+from tubelearns import Acquisition
 
-# Provide a path to a text file containing YouTube video URLs.
-text_link('path_to_file.txt', name='output_folder_name')
+# Initialize the Acquisition class
+model = Acquisition()
+
+# Grab transcripts from a YouTube playlist
+playlist_url = 'https://www.youtube.com/your_playlist_url'
+model.playlist_grab(playlist_url, name="raw_data")
 ```
 
-### Extract Transcript from a Single Video URL
+### Extract Video Links from Playlist
 
 ```python
-from tubelearns import url_grab
-
-# Provide a single YouTube video URL.
-url_grab('video_url', name='output_folder_name')
+# Extract video links from a YouTube playlist
+playlist_url = 'https://www.youtube.com/your_playlist_url'
+model.play2text(playlist_url)
 ```
 
-### Extract Transcripts from a YouTube Playlist
+### Tokenization and Cleaning
 
 ```python
-from tubelearns import playlist_grab
-
-# Provide the URL of a YouTube playlist.
-playlist_grab('playlist_url', name='output_folder_name')
-```
-
-
-### Cleaning and Punctuation Removal
-
-```python
-from tubelearns import Cleaning
-
-# Initialize the Cleaning class
-cleaner = Cleaning()
-
-# Clean and remove punctuation from text
-content = "Hey! hope you good"
-cleaned_text = cleaner.punct_raw(content)
-print(cleaned_text)
-```
-### Tokenization
-
-```python
-from tubelearns import Tokenization
+from tubelearns.tokenizers import Tokenization, Cleaning
 
 # Initialize the Tokenization class
 tokenizer = Tokenization()
+cleaner = Cleaning()
 
-# Tokenize text
-content = "Hello sam. How are you."
-tokenized_text = tokenizer.tokenize_raw(content)
-print(tokenized_text)
+# Tokenize text data
+text_data = "Your input text here."
+tokenized_data = tokenizer.tokenize_raw(text_data)
+cleaned_data = cleaner.punct_raw(tokenized_data)
 ```
 
-## Development Status
+Refer to the [TubeLearns documentation](https://your-documentation-link-here) for detailed usage instructions and examples.
 
-This project is currently in the planning stage.
+## Contributing
+
+If you'd like to contribute to TubeLearns or report issues, please check out the [GitHub repository](https://github.com/KabilPreethamK/tubelearns).
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Contributions
+## Acknowledgments
 
-Contributions are welcome! Please feel free to open issues or submit pull requests.
+- [YouTube Transcript API](https://github.com/jdepoix/youtube-transcript-api)
+- [PyTube](https://github.com/pytube/pytube)
+- [spaCy](https://spacy.io/)
+- [num2words](https://github.com/savoirfairelinux/num2words)
 
-## Contact
+---
 
-For any inquiries or feedback, please contact [KabilPreethamK](mailto:kabilpreethamk@gmail.com).
+
+Enjoy using TubeLearns! If you have any questions or encounter issues, please don't hesitate to [get in touch](mailto:your-email@example.com).
 ```
 
