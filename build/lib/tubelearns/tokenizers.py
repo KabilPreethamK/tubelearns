@@ -42,7 +42,7 @@ class Cleaning:
         
         pass
     
-    def punct_raw(self,path_to_list):
+    def punct_list(self,path_to_list):
         import spacy
         nlp = spacy.load("en_core_web_sm")
         
@@ -66,6 +66,33 @@ class Cleaning:
                     cleaned_words_2.append(cleaned_word)
             cleaned_sentence_2 = " ".join(cleaned_words_2)
             cleaning_2.append(cleaned_sentence_2)
+        return cleaning_2
+    
+    def punct_raw(self,path_to_list):
+        import spacy
+        nlp = spacy.load("en_core_web_sm")
+        
+        import string
+        punctuation = set(string.punctuation)
+
+
+
+        cleaning_2 = []
+
+        for sentence in path_to_list:
+            sentence = nlp(sentence)
+            cleaned_words_2 = []
+            for token in sentence:
+                clean_char = []
+                for char in token.text:
+                    if char not in punctuation:
+                        clean_char.append(char)
+                cleaned_word = "".join(clean_char)
+                if cleaned_word:  
+                    cleaned_words_2.append(cleaned_word)
+            cleaned_sentence_2 = " ".join(cleaned_words_2)
+            cleaning_2.append(cleaned_sentence_2)
+        cleaning_2 = "".join(cleaning_2)
         return cleaning_2
     
 
