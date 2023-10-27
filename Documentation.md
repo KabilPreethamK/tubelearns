@@ -48,7 +48,6 @@ Don't let data collection hold you back. Embrace tubelearns and transform your N
 
 - [Installation Guide](https://github.com/KabilPreethamK/tubelearns#installation)
 - [Usage Examples](https://github.com/KabilPreethamK/tubelearns#usage)
-- [API Reference](https://your-documentation-link-here/api)
 - [FAQ](https://github.com/KabilPreethamK/tubelearns/discussions/3)
 
 Please note that tubelearns requires an internet connection for data collection.
