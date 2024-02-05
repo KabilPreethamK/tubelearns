@@ -77,8 +77,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ---
 
 
-<<<<<<< HEAD
 Enjoy using TubeLearns! If you have any questions or encounter issues, please don't hesitate to [get in touch](mailto:tubelearnsofficial@gmail.com).
-=======
+
 Enjoy using TubeLearns! If you have any questions or encounter issues, please don't hesitate to [get in touch](mailto:tubelearnsofficial@gmail.com).
->>>>>>> 890e5b55a4bec5e3340e23972912365f38430e06
+
