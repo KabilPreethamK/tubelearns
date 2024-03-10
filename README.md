@@ -31,7 +31,7 @@ model = Acquisition()
 
 # Grab transcripts from a YouTube playlist
 playlist_url = 'https://www.youtube.com/your_playlist_url'
-model.playlist_grab(playlist_url, name="raw_data")
+model.PlaylistGrab(playlist_url, name="raw_data")
 ```
 
 ### Extract Video Links from Playlist
@@ -39,7 +39,7 @@ model.playlist_grab(playlist_url, name="raw_data")
 ```python
 # Extract video links from a YouTube playlist
 playlist_url = 'https://www.youtube.com/your_playlist_url'
-model.play2text(playlist_url)
+model.Play2Text(playlist_url)
 ```
 
 ### Tokenization and Cleaning
@@ -53,8 +53,8 @@ cleaner = Cleaning()
 
 # Tokenize text data
 text_data = "Your input text here."
-tokenized_data = tokenizer.tokenize_raw(text_data)
-cleaned_data = cleaner.punct_list(tokenized_data)
+tokenized_data = tokenizer.TokenizeRaw(text_data)
+cleaned_data = tokenizer.PunctList(tokenized_data)
 ```
 
 Refer to the [TubeLearns documentation](https://github.com/KabilPreethamK/tubelearns/blob/main/Documentation.md) for detailed usage instructions and examples.

@@ -1,10 +1,13 @@
 Metadata-Version: 2.1
 Name: tubelearns
-Version: 1.1.7
-Summary: Python script for extracting,cleaning and tokenization YouTube video transcripts for Pre-Processing in machine learning.
+Version: 2.1.0
+Summary: Python script for extracting, cleaning, and tokenizing YouTube video transcripts for Pre-Processing in machine learning.
+Home-page: UNKNOWN
 Author: KabilPreethamK
 Author-email: <kabilpreethamk@gmail.com>
+License: UNKNOWN
 Keywords: python,video,transcript,raw data,cleaning,machine learning,pre-processing
+Platform: UNKNOWN
 Classifier: Development Status :: 5 - Production/Stable
 Classifier: Intended Audience :: Developers
 Classifier: Intended Audience :: Education
@@ -17,18 +20,12 @@ Classifier: Operating System :: Microsoft :: Windows
 Classifier: Operating System :: POSIX :: Linux
 Description-Content-Type: text/markdown
 License-File: LICENSE
-Requires-Dist: youtube-transcript-api
-Requires-Dist: requests
-Requires-Dist: pytube
-Requires-Dist: regex
-Requires-Dist: num2words
-Requires-Dist: spacy
 
 
 
-## Tube-Data: YouTube Video Transcript Extractor
+## TubeLearns: YouTube Video Transcript Extractor
 
-Tube-Data is a Python script designed for extracting and cleaning YouTube video transcripts for preprocessing in machine learning. This versatile tool streamlines the process of acquiring high-quality text data from YouTube videos, making it ideal for various natural language processing tasks, sentiment analysis, speech recognition, and more.
+TubeLearns is a Python script designed for extracting and cleaning YouTube video transcripts for preprocessing in machine learning. This versatile tool streamlines the process of acquiring high-quality text data from YouTube videos, making it ideal for various natural language processing tasks, sentiment analysis, speech recognition, and more.
 
 ## Features
 
@@ -58,7 +55,7 @@ model = Acquisition()
 
 # Grab transcripts from a YouTube playlist
 playlist_url = 'https://www.youtube.com/your_playlist_url'
-model.playlist_grab(playlist_url, name="raw_data")
+model.PlaylistGrab(playlist_url, name="raw_data")
 ```
 
 ### Extract Video Links from Playlist
@@ -66,7 +63,7 @@ model.playlist_grab(playlist_url, name="raw_data")
 ```python
 # Extract video links from a YouTube playlist
 playlist_url = 'https://www.youtube.com/your_playlist_url'
-model.play2text(playlist_url)
+model.Play2Text(playlist_url)
 ```
 
 ### Tokenization and Cleaning
@@ -80,8 +77,8 @@ cleaner = Cleaning()
 
 # Tokenize text data
 text_data = "Your input text here."
-tokenized_data = tokenizer.tokenize_raw(text_data)
-cleaned_data = cleaner.punct_raw(tokenized_data)
+tokenized_data = tokenizer.TokenizeRaw(text_data)
+cleaned_data = tokenizer.PunctList(tokenized_data)
 ```
 
 Refer to the [TubeLearns documentation](https://github.com/KabilPreethamK/tubelearns/blob/main/Documentation.md) for detailed usage instructions and examples.
@@ -105,3 +102,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 
 Enjoy using TubeLearns! If you have any questions or encounter issues, please don't hesitate to [get in touch](mailto:tubelearnsofficial@gmail.com).
+
+
+

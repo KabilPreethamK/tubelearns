@@ -1,0 +1,3 @@
+[console_scripts]
+install_models = tubelearns.install_models:main
+

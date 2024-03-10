@@ -1,6 +1,6 @@
-youtube-transcript-api
-requests
+num2words
 pytube
 regex
-num2words
+requests
 spacy
+youtube-transcript-api

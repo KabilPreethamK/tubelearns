@@ -13,7 +13,7 @@ pip install tubelearns
 Import the relevant functions from `tubelearns` into your Python script or Jupyter Notebook.
 
 ```python
-from tubelearns import text_link, url_grab, playlist_grab, play2text
+from tubelearns import TextLink, UrlGrab, PlaylistGrab, Play2Text
 ```
 
 ### 3. Extract Transcripts from YouTube Videos
@@ -24,7 +24,7 @@ If you have a list of YouTube video URLs in a text file, you can extract transcr
 
 ```python
 # Provide the path to the text file containing video URLs
-text_link('path_to_file.txt', name='output_folder_name')
+TextLink('path_to_file.txt', name='output_folder_name')
 ```
 
 #### Option 2: Extract Transcript from a Single Video URL
@@ -33,7 +33,7 @@ To extract the transcript from a single YouTube video URL:
 
 ```python
 # Provide a single YouTube video URL
-url_grab('video_url', name='output_folder_name')
+UrlGrab('video_url', name='output_folder_name')
 ```
 
 #### Option 3: Extract Transcripts from a YouTube Playlist
@@ -42,7 +42,7 @@ If you want to extract transcripts from an entire YouTube playlist:
 
 ```python
 # Provide the URL of a YouTube playlist
-playlist_grab('playlist_url', name='output_folder_name')
+PlaylistGrab('playlist_url', name='output_folder_name')
 ```
 
 ### 4. Convert Playlist Video Links to Text File
@@ -51,7 +51,7 @@ You can also convert the video links from a YouTube playlist into a text file:
 
 ```python
 # Provide the URL of a YouTube playlist
-play2text('playlist_url')
+Play2Text('playlist_url')
 ```
 
 ### 5. Data Processing (Optional)

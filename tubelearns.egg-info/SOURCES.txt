@@ -2,10 +2,12 @@ LICENSE
 README.md
 setup.py
 tubelearns/__init__.py
+tubelearns/install_models.py
 tubelearns/sourcing.py
 tubelearns/tokenizers.py
 tubelearns.egg-info/PKG-INFO
 tubelearns.egg-info/SOURCES.txt
 tubelearns.egg-info/dependency_links.txt
+tubelearns.egg-info/entry_points.txt
 tubelearns.egg-info/requires.txt
 tubelearns.egg-info/top_level.txt
