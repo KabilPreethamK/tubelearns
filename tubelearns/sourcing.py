@@ -2,7 +2,7 @@ class Acquisition:
     def __init__(self) -> None:
         pass
 
-    def playlist_grab(self,playlist_url, name="raw_data"):
+    def PlaylistGrab(self, playlist_url, name="raw_data"):
         import os 
         from youtube_transcript_api import YouTubeTranscriptApi
         import re
@@ -26,7 +26,10 @@ class Acquisition:
                         "[Gunshots]",
                         "[Sirens Wailing]",
                         "[Dog Barking]",
-                        "[Bell Ringing]"
+                        "[Bell Ringing]",
+                        "“"
+                        
+                        
                     ]
         try:
             playlist = Playlist(playlist_url)
@@ -55,6 +58,8 @@ class Acquisition:
 
 
                     filtered_transcript = ' '.join(entry['text'] for entry in transcript if all(keyword not in entry['text'] for keyword in exclude_keywords))
+                    
+
 
                     url_punct = "http://bark.phon.ioc.ee/punctuator"
 
@@ -80,7 +85,7 @@ class Acquisition:
             print("Error:", e)
 
     
-    def play2text(self,playlist_url):
+    def Play2Text(self, playlist_url):
         import os 
         from youtube_transcript_api import YouTubeTranscriptApi
         import re
@@ -102,7 +107,7 @@ class Acquisition:
         except Exception as e:
             print("Error:", e)
 
-    def text_link(self,path_text,name="raw_data"):
+    def TextLink(self, path_text, name="raw_data"):
         import os 
         from youtube_transcript_api import YouTubeTranscriptApi
         import re
@@ -126,7 +131,8 @@ class Acquisition:
                         "[Gunshots]",
                         "[Sirens Wailing]",
                         "[Dog Barking]",
-                        "[Bell Ringing]"
+                        "[Bell Ringing]",
+                        "“"
                     ]
         if not os.path.exists(f"./{name}/"):
             os.makedirs(f"./{name}/")
@@ -152,6 +158,8 @@ class Acquisition:
 
                 
                 filtered_transcript = ' '.join(entry['text'] for entry in transcript if all(keyword not in entry['text'] for keyword in exclude_keywords))
+                
+
 
                 url_punct = "http://bark.phon.ioc.ee/punctuator"
 
@@ -176,7 +184,7 @@ class Acquisition:
                 pass
 
     
-    def url_grab(self,url,name="raw_data"):
+    def UrlGrab(self, url, name="raw_data"):
         import os 
         from youtube_transcript_api import YouTubeTranscriptApi
         import re
@@ -200,7 +208,8 @@ class Acquisition:
                         "[Gunshots]",
                         "[Sirens Wailing]",
                         "[Dog Barking]",
-                        "[Bell Ringing]"
+                        "[Bell Ringing]",
+                        "“"
                     ]
         if not os.path.exists(f"./{name}/"):
             os.makedirs(f"./{name}/")
@@ -223,6 +232,7 @@ class Acquisition:
             transcript = YouTubeTranscriptApi.get_transcript(extracted_string)
 
             filtered_transcript = ' '.join(entry['text'] for entry in transcript if all(keyword not in entry['text'] for keyword in exclude_keywords))
+            filtered_transcript = filtered_transcript.replace("“", "").replace("”", "").replace("’", "")
 
             url_punct = "http://bark.phon.ioc.ee/punctuator"
 
